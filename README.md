@@ -16,9 +16,9 @@ A dual-interface weather application that provides current temperature and wind 
 - Postman (API Testing)
 
 # Includes
-This project includes two versions of the weather app:
+Two versions of the weather app:
 
-A direct web version for Yabucoa's weather using HTML, CSS, and JavaScript. Another option could be, a Command Line Interface (CLI) version in Python. 
+Direct web version for Yabucoa's weather using HTML, CSS, and JavaScript. Another option could be, a Command Line Interface (CLI) version in Python. 
 
 # Web Version
 - Web browser (Chrome, Firefox, Edge, Safari)
