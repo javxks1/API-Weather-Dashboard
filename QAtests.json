@@ -1,0 +1,54 @@
+let jsonData;
+
+//Status test
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+//Response time test
+pm.test("Response is JSON", function () {
+    pm.response.to.be.withBody;
+    pm.response.to.be.json;
+    jsonData = pm.response.json();
+});
+
+//Current data exist test
+pm.test("Current weather data exists", function () {
+    jsonData = jsonData || pm.response.json();
+    pm.expect(jsonData).to.have.property("current");
+});
+
+//Temperature exist test 
+pm.test("Temperature exists", function () {
+    jsonData = jsonData || pm.response.json();
+    pm.expect(jsonData.current).to.have.property("temperature_2m");
+});
+
+//Wind Speed exist test 
+pm.test("Wind Speed exists", function () {
+    jsonData = jsonData || pm.response.json();
+    pm.expect(jsonData.current).to.have.property("wind_speed_10m");
+});
+
+//Temperature information test 
+pm.test("Temperature is a number and realistic", function () {
+    jsonData = jsonData || pm.response.json();
+    let temp = jsonData.current.temperature_2m;
+    pm.expect(temp).to.be.a("number");
+    pm.expect(temp).to.be.within(-50, 130); // in °F or adjusted range
+});
+
+//Wind speed information test
+pm.test("Wind Speed is a number and not negative", function () {
+    jsonData = jsonData || pm.response.json();
+    let wind = jsonData.current.wind_speed_10m;
+    pm.expect(wind).to.be.a("number");
+    pm.expect(wind).to.be.at.least(0);
+});
+
+//Time format test 
+pm.test("Current time is ISO format", function () {
+    jsonData = jsonData || pm.response.json();
+    let time = jsonData.current.time;
+    pm.expect(time).to.match(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/);
+});
