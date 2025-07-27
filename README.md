@@ -1,14 +1,14 @@
 # API-Weather-Dashboard
 
-A dual-interface weather application that provides current temperature and wind speed for Yabucoa, Puerto Rico, using the free [Open-Meteo API](https://open-meteo.com/).
+Interface weather application that provides current temperature and wind speed for Yabucoa, PR using [Open-Meteo API](https://open-meteo.com/).
 
 ## Features
 
-- Current temperature and wind speed  
-- Web Page (HTML, CSS, JS)  
-- Command Line Interface version (Python)  
-- Fully functional without API keys  
-- Tested with Postman  
+- Current temperature and wind speed
+- Web Page (HTML, CSS, JS)
+- Command Line Interface version (Python)
+- Fully functional without API keys
+- Tested with Postman
 
 ## Technologies
 - Open-Meteo API (No Auth Required)
