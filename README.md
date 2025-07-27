@@ -10,14 +10,10 @@ A dual-interface weather application that provides current temperature and wind 
 -Fully functional without API keys  
 -Tested with Postman  
 
----
-
 ## Technologies
 - Open-Meteo API (No Auth Required)
 - Programing Laguages: HTML, CSS, JavaScript & Python 3
 - Postman (API Testing)
-
----
 
 # Includes
 This project includes two versions of the weather app:
